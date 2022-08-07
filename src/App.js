@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './App.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>App</div>
+      <h1 className="underline text-3xl">Kossi Please Sleep!</h1>
     );
   }
 }
