@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import './App.css';
 
+const activeMenu = false;
 const App = () => (
   <div>
     <BrowserRouter>
@@ -22,13 +23,60 @@ const App = () => (
               hover:drop-shadow-xl
               hover:bg-light-gray text-white"
               style={{
-                background: 'blue',
+                background: '#f56565',
                 borderRadius: '50%',
               }}
             >
               <FiSettings />
             </button>
           </TooltipComponent>
+        </div>
+        {/* sidebars */}
+        {activeMenu ? (
+          <div className="w-72 fixed sidebar
+            dark:bg-secondary-dark-bg
+            bg-white"
+          >
+            Sidebar
+          </div>
+        ) : (
+          <div className="w-0
+            dark:bg-secondary-dark-bg"
+          >
+            Sidebar
+          </div>
+        )}
+        {/* Navigation bar */}
+        {/* eslint-disable */}
+        <div className="dark:bg-main-bg bg-main-bg
+          min-h-screen w-full ${activeMenu ?
+          'md:ml-72' : 'flex-2'}"
+        >
+          <div className="fixed md:static
+          bg-main-bg dark:bg-main-dark-bg
+            navbar w-full"
+          >
+            Navbar
+          </div>
+        </div>
+        {/* Routes */}
+        <div>
+          <Routes>
+            {/* Dashboard */}
+            <Route path="/" element="ECommerce" />
+            <Route path="/ecommerce" element="ECommerce" />
+
+            {/* pages */}
+            <Route path="/orders" element="Orders" />
+            <Route path="/employees" element="Employees" />
+            <Route path="/customers" element="Customers" />
+
+            {/* Apps */}
+            <Route path="/calendar" element="Calendar" />
+            <Route path="/kanban" element="Kanban" />
+            <Route path="/editor" element="Editor" />
+            <Route path="/color-picker" element="ColorPicker" />
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
