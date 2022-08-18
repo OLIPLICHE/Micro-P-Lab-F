@@ -3,9 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Calendar, Employees, ColorPicker, Kanban, Editor } from './pages';
+
 import './App.css';
 
-const activeMenu = false;
+const activeMenu = true;
 const App = () => (
   <div>
     <BrowserRouter>
@@ -37,13 +40,13 @@ const App = () => (
             dark:bg-secondary-dark-bg
             bg-white"
           >
-            Sidebar
+            <Sidebar />
           </div>
         ) : (
           <div className="w-0
             dark:bg-secondary-dark-bg"
           >
-            Sidebar
+            <Sidebar />
           </div>
         )}
         {/* Navigation bar */}
@@ -56,26 +59,26 @@ const App = () => (
           bg-main-bg dark:bg-main-dark-bg
             navbar w-full"
           >
-            Navbar
+            <Navbar />
           </div>
         </div>
         {/* Routes */}
         <div>
           <Routes>
             {/* Dashboard */}
-            <Route path="/" element="ECommerce" />
-            <Route path="/ecommerce" element="ECommerce" />
+            <Route path="/" element={ <Ecommerce/> } />
+            <Route path="/ecommerce" element={<Ecommerce />} />
 
             {/* pages */}
-            <Route path="/orders" element="Orders" />
-            <Route path="/employees" element="Employees" />
-            <Route path="/customers" element="Customers" />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/employees" element={<Employees />} />
+            <Route path="/customers" element={<Customers />} />
 
             {/* Apps */}
-            <Route path="/calendar" element="Calendar" />
-            <Route path="/kanban" element="Kanban" />
-            <Route path="/editor" element="Editor" />
-            <Route path="/color-picker" element="ColorPicker" />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/kanban" element={<Kanban />} />
+            <Route path="/editor" element={<Editor />} />
+            <Route path="/color-picker" element={<ColorPicker />} />
           </Routes>
         </div>
       </div>
