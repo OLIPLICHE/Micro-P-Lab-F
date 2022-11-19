@@ -5,8 +5,8 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import './App.css';
 
-const activeMenu = false;
-const App = () => (
+const activeMenu = true;
+const App = () => (s
   <div>
     <BrowserRouter>
       <div className="flex relative
