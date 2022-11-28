@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Ecommerce = () => {
-  return (
-    <div>Ecommerce</div>
-  )
-}
+const Ecommerce = () => (
+  <div>
+    Ecommerce
+  </div>
+);
 
-export default Ecommerce
+export default Ecommerce;

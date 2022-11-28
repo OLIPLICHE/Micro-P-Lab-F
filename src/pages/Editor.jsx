@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Editor = () => {
-  return (
-    <div>Editor</div>
-  )
-}
+const Editor = () => (
+  <div>
+    Editor
+  </div>
+);
 
-export default Editor
+export default Editor;
