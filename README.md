@@ -1,2 +1,2 @@
 # micro-p-lab
-- Under construction ..
+- Under construction .
