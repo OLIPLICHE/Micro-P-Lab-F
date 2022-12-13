@@ -13,7 +13,7 @@ import {
 
 import './App.css';
 
-const activeMenu = true;
+const activeMenu = 'true';
 const App = () => (
   <div>
     <BrowserRouter>
@@ -49,7 +49,7 @@ const App = () => (
           </div>
         ) : (
           <div className="w-0 dark:bg-gray-900">
-            <sidebar />
+            <Sidebar />
           </div>
         )}
         {/* Navigation bar */}
