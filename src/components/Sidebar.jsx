@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import icons
 import { GiWolfHowl } from 'react-icons/gi';
-// import { MdOutlineCancel } from 'react-icons/md';
+import { FaRegWindowClose } from 'react-icons/fa';
 // Popups syncfusion
-// import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 // import { links } from '../data/core';
 const activeMenu = true;
 const Sidebar = () => (
@@ -18,11 +18,26 @@ const Sidebar = () => (
         <Link
           to="/"
           onClick={() => {}}
-          className="items-center"
+          className="items-center flex mt-4 gap-2 ml-2 text-xl
+          font-bold tracking-tight dark:text-white
+          text-slate-900"
         >
           <GiWolfHowl />
-          Sideba
+          <span>Sideba</span>
         </Link>
+        <TooltipComponent
+          content="Menu"
+          position="BottomCenter"
+        >
+          <button
+            type="button"
+            onClick={() => {}}
+            className="text-xl p-3 mt-2 md:hidden
+            block hover:bg-light-gray"
+          >
+            <FaRegWindowClose />
+          </button>
+        </TooltipComponent>
       </div>
     </>
     )}
