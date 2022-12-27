@@ -6,7 +6,8 @@ import { GiWolfHowl } from 'react-icons/gi';
 import { FaRegWindowClose } from 'react-icons/fa';
 // Popups syncfusion
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-// import { links } from '../data/core';
+import { links } from '../data/core';
+
 const activeMenu = true;
 const Sidebar = () => (
   <div className="ml-3 h-screen md:overflow-hidden overflow-auto
@@ -32,12 +33,21 @@ const Sidebar = () => (
           <button
             type="button"
             onClick={() => {}}
-            className="text-xl p-3 mt-2 md:hidden
+            className="text-xl p-3 mt-4 md:hidden
             block hover:bg-light-gray"
           >
             <FaRegWindowClose />
           </button>
         </TooltipComponent>
+      </div>
+      <div className="mt-10">
+        {links.map((item) => (
+          <div key={item.title}>
+            <p className="text-gray-400 m-3 mt-4 uppercase">
+              {item.title}
+            </p>
+          </div>
+        ))}
       </div>
     </>
     )}
