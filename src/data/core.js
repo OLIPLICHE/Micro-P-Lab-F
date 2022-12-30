@@ -1,19 +1,18 @@
 import React from 'react';
 import {
-  AiOutlineShoppingCart, AiOutlineCalendar,
-  AiOutlineStock, AiOutlineAreaChart, AiOutlineBarChart,
+  AiOutlineShopping, AiOutlineTeam,
+  AiOutlineAreaChart,
 }
   from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart } from 'react-icons/fi';
-import { BsKanban, BsBarChart } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
-import { GiLouvrePyramid } from 'react-icons/gi';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-// import { } from 'react-icons/md';
-// import { } from 'react-icons/hi';
-// import { } from 'react-icons/ti';
-// import { } from 'react-icons/gr';
+import { FiEdit, FiPieChart, FiBarChart2 } from 'react-icons/fi';
+import { BsKanban, BsCalendarDay } from 'react-icons/bs';
+import { CgColorBucket } from 'react-icons/cg';
+import { GiBallPyramid } from 'react-icons/gi';
+import { MdOutlineBusinessCenter, MdMap, MdStackedLineChart } from 'react-icons/md';
+import { FaPeopleCarry } from 'react-icons/fa';
+import { BiLineChart } from 'react-icons/bi';
+import { GrMoney } from 'react-icons/gr';
+// import { RiStockLine } from 'react-icons/ri';
 
 export const barPrimaryXAxis = {
   valueType: 'Category',
@@ -26,7 +25,7 @@ export const links = [
     links: [
       {
         name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        icon: <MdOutlineBusinessCenter />,
       },
     ],
   },
@@ -36,15 +35,15 @@ export const links = [
     links: [
       {
         name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        icon: <AiOutlineShopping />,
       },
       {
         name: 'employees',
-        icon: <IoMdContacts />,
+        icon: <AiOutlineTeam />,
       },
       {
         name: 'customers',
-        icon: <RiContactsLine />,
+        icon: <FaPeopleCarry />,
       },
     ],
   },
@@ -53,7 +52,7 @@ export const links = [
     links: [
       {
         name: 'calendra',
-        icon: <AiOutlineCalendar />,
+        icon: <BsCalendarDay />,
       },
       {
         name: 'kanban',
@@ -65,7 +64,7 @@ export const links = [
       },
       {
         name: 'color-picker',
-        icon: <BiColorFill />,
+        icon: <CgColorBucket />,
       },
     ],
   },
@@ -74,7 +73,7 @@ export const links = [
     links: [
       {
         name: 'line',
-        icon: <AiOutlineStock />,
+        icon: <BiLineChart />,
       },
       {
         name: 'area',
@@ -82,7 +81,7 @@ export const links = [
       },
       {
         name: 'bar',
-        icon: <AiOutlineBarChart />,
+        icon: <FiBarChart2 />,
       },
       {
         name: 'pie',
@@ -90,19 +89,19 @@ export const links = [
       },
       {
         name: 'financial',
-        icon: <RiStockLine />,
+        icon: <GrMoney />,
       },
       {
         name: 'color-mapping',
-        icon: <BsBarChart />,
+        icon: <MdMap />,
       },
       {
         name: 'pyramid',
-        icon: <GiLouvrePyramid />,
+        icon: <GiBallPyramid />,
       },
       {
         name: 'stacked',
-        icon: <AiOutlineBarChart />,
+        icon: <MdStackedLineChart />,
       },
     ],
   },
