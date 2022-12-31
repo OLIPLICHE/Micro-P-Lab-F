@@ -12,8 +12,9 @@ import {
 } from './pages';
 
 import './App.css';
+import { useStateContext } from './contexts/ContextProvider';
 
-const activeMenu = 'true';
+const { activeMenu } = useStateContext();
 const App = () => (
   <div>
     <BrowserRouter>
