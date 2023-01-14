@@ -11,9 +11,11 @@ import {
   Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor,
 } from './pages';
 
+import { useStateContext } from './contexts/ContextProvider';
+
 import './App.css';
 
-const activeMenu = 'true';
+const { activeMenu } = useStateContext();
 const App = () => (
   <div>
     <BrowserRouter>
