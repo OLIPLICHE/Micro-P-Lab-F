@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
-// import { FiShoppingCart } from 'react-icons/fi-shopping-cart';
-// import { BsChatLeft } from 'react-icons/bs';
-// import { RiNotifaction3Line } from 'react-icons/ri';
+import { FiShoppingCart } from 'react-icons/fi';
+import { BsChatLeft } from 'react-icons/bs';
+import { RiNotification4Line } from 'react-icons/ri';
 // import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 // import avatar from '../data/avatar.jpg';
-// import { Cart, Chat, Notification, UserProfile } from '.';
+// import { Cart, Chat } from '.';
+// import { Notification, UserProfile } from '.'
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({
@@ -31,7 +32,7 @@ const NavButton = ({
 );
 
 const Navbar = () => {
-  const { setActiveMenu } = useStateContext();
+  const { handleClick, setActiveMenu } = useStateContext();
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -41,6 +42,28 @@ const Navbar = () => {
         color="blue"
         icon={<CgMenuGridR />}
       />
+      <div className="flex">
+        <NavButton
+          title="Cart"
+          customFunc={() => handleClick('cart')}
+          color="blue"
+          icon={<FiShoppingCart />}
+        />
+        <NavButton
+          title="Chat"
+          dotColor="#03C9D7"
+          customFunc={() => handleClick('chat')}
+          color="blue"
+          icon={<BsChatLeft />}
+        />
+        <NavButton
+          title="Notification"
+          dotColor="#03C9D7"
+          customFunc={() => handleClick('notification')}
+          color="blue"
+          icon={<RiNotification4Line />}
+        />
+      </div>
     </div>
   );
 };
