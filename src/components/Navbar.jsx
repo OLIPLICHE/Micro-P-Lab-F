@@ -6,9 +6,9 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification4Line } from 'react-icons/ri';
 // import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-// import avatar from '../data/avatar.jpg';
 // import { Cart, Chat } from '.';
-// import { Notification, UserProfile } from '.'
+// import { UserProfile } from '.';
+import owner from '../data/owner.jpg';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({
@@ -63,6 +63,28 @@ const Navbar = () => {
           color="blue"
           icon={<RiNotification4Line />}
         />
+        <div
+          className="flex items-center gap-2 cursor-pointer p-1 hoher:bg-light-gray rounded-lg "
+        >
+          <TooltipComponent
+            content="Profile"
+            position="BottomCenter"
+            onClick={() => handleClick('userProfile')}
+          >
+            <img
+              className="rounded-full"
+              alt="owner"
+              src={owner}
+            />
+            <p>
+              <span className="text-zinc-900 text-14">Hello,</span>
+              {' '}
+              <span className="text-zinc-900 font-bold ml-1 text-14">
+                Paka
+              </span>
+            </p>
+          </TooltipComponent>
+        </div>
       </div>
     </div>
   );
