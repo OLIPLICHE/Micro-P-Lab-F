@@ -15,6 +15,8 @@ import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css';
 /* eslint-disable react/prop-types */
+import { useStateContext } from './contexts/ContextProvider';
+
 const App = () => {
   const { activeMenu } = useStateContext();
 

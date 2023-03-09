@@ -2,12 +2,13 @@ import React from 'react';
 // To switch from different pages and application
 import { Link, NavLink } from 'react-router-dom';
 // import icons
-import { GiWolfHowl } from 'react-icons/gi';
+import { GiChampions } from 'react-icons/gi';
 import { FaRegWindowClose } from 'react-icons/fa';
 // Popups syncfusion
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { links } from '../data/core';
 import { useStateContext } from '../contexts/ContextProvider';
+
 
 const Sidebar = () => {
   const { activeMenu, setActiveMenu } = useStateContext();
