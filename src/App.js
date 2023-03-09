@@ -14,8 +14,6 @@ import {
 import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css';
-/* eslint-disable */
-import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
   const { activeMenu } = useStateContext();
