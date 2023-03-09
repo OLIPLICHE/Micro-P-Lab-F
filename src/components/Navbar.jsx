@@ -4,7 +4,7 @@ import { CgMenuGridR } from 'react-icons/cg';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification4Line } from 'react-icons/ri';
-// import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 // import { Cart, Chat } from '.';
 // import { UserProfile } from '.';
@@ -63,28 +63,26 @@ const Navbar = () => {
           color="blue"
           icon={<RiNotification4Line />}
         />
-        <div
+        <TooltipComponent
+          content="Profile"
+          position="BottomCenter"
+          onClick={() => handleClick('userProfile')}
           className="flex items-center gap-2 cursor-pointer p-1 hoher:bg-light-gray rounded-lg "
         >
-          <TooltipComponent
-            content="Profile"
-            position="BottomCenter"
-            onClick={() => handleClick('userProfile')}
-          >
-            <img
-              className="rounded-full"
-              alt="owner"
-              src={owner}
-            />
-            <p>
-              <span className="text-zinc-900 text-14">Hello,</span>
-              {' '}
-              <span className="text-zinc-900 font-bold ml-1 text-14">
-                Paka
-              </span>
-            </p>
-          </TooltipComponent>
-        </div>
+          <img
+            className="rounded-full w-8 h-8"
+            alt="owner"
+            src={owner}
+          />
+          <p>
+            <span className="text-zinc-900 text-14">Hello,</span>
+            {' '}
+            <span className="text-zinc-900 font-bold ml-1 text-14">
+              Paka
+            </span>
+          </p>
+          <MdKeyboardArrowDown className="text-zinc-900 text-14" />
+        </TooltipComponent>
       </div>
     </div>
   );
