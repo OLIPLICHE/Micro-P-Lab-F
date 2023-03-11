@@ -1,7 +1,7 @@
 import React from 'react';
 // To switch from different pages and application
 import { Link, NavLink } from 'react-router-dom';
-// // import icons
+// import icons
 import { GiWolfHowl } from 'react-icons/gi';
 import { FaRegWindowClose } from 'react-icons/fa';
 // Popups syncfusion
