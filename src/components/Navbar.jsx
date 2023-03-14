@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FiShoppingCart } from 'react-icons/fi';
