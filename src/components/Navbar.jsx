@@ -1,13 +1,13 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification4Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-// import { Cart, Chat } from '.';
-// import { UserProfile } from '.';
+import {
+  Cart, Chat, Notification, UserProfile,
+} from '.';
 import owner from '../data/owner.jpg';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -24,15 +24,37 @@ const NavButton = ({
       <span
         style={{ background: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
 
 const Navbar = () => {
-  const { handleClick, setActiveMenu } = useStateContext();
+  const {
+    handleClick, setActiveMenu, isClicked, screenSize, setScreenSize,
+  } = useStateContext();
+
+  // To figure out the size when the window loads
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    // In react, whenever you use window.Event..., you also have to remove it
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // To track the screen size
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -83,6 +105,10 @@ const Navbar = () => {
           </p>
           <MdKeyboardArrowDown className="text-zinc-900 text-14" />
         </TooltipComponent>
+        {isClicked.cart && <Cart />}
+        {isClicked.chat && <Chat />}
+        {isClicked.notification && <Notification />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   );
