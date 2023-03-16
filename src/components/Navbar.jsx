@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
@@ -32,7 +32,30 @@ const NavButton = ({
 );
 
 const Navbar = () => {
-  const { handleClick, setActiveMenu, isClicked } = useStateContext();
+  const {
+    handleClick, setActiveMenu, isClicked, screenSize, setScreenSize,
+  } = useStateContext();
+
+  // To figure out the size when the window loads
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    // In react, whenever you use window.Event..., you also have to remove it
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // To track the screen size
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
