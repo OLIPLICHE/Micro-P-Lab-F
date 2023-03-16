@@ -5,8 +5,9 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification4Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-// import { Cart, Chat } from '.';
-// import { UserProfile } from '.';
+import {
+  Cart, Chat, Notification, UserProfile,
+} from '.';
 import owner from '../data/owner.jpg';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -31,7 +32,7 @@ const NavButton = ({
 );
 
 const Navbar = () => {
-  const { handleClick, setActiveMenu } = useStateContext();
+  const { handleClick, setActiveMenu, isClicked } = useStateContext();
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -82,6 +83,10 @@ const Navbar = () => {
           </p>
           <MdKeyboardArrowDown className="text-zinc-900 text-14" />
         </TooltipComponent>
+        {isClicked.cart && <Cart />}
+        {isClicked.chat && <Chat />}
+        {isClicked.notification && <Notification />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   );
