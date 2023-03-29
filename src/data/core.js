@@ -8,7 +8,7 @@ import { FiEdit, FiPieChart, FiBarChart2 } from 'react-icons/fi';
 import { BsKanban, BsCalendarDay } from 'react-icons/bs';
 import { CgColorBucket } from 'react-icons/cg';
 import { GiBallPyramid } from 'react-icons/gi';
-import { MdOutlineBusinessCenter, MdMap, MdStackedLineChart } from 'react-icons/md';
+import { MdOutlineBusinessCenter, MdMap, MdStackedLineChart, MdOutlineSupervisorAccount } from 'react-icons/md';
 import { FaPeopleCarry } from 'react-icons/fa';
 import { BiLineChart } from 'react-icons/bi';
 import { GrMoney } from 'react-icons/gr';
@@ -105,4 +105,31 @@ export const links = [
       },
     ],
   },
+];
+
+export const profitData = [
+  {
+    icon: <MdOutlineSupervisorAccount />,
+    amount: '68,245',
+    percentage: '-4%',
+    title: 'Customers',
+    inconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+    pcColor: 'red-600',
+  },
+];
+
+export const SparklineArea = [
+  { x: 1, yval: 2 },
+  { x: 2, yval: 6 },
+  { x: 3, yval: 8 },
+  { x: 4, yval: 5 },
+  { x: 5, yval: 10 },
+];
+
+export const pieChart = [
+  { x: '2020', y: 18, text: '30%'},
+  { x: '2020', y: 18, text: '20%' },
+  { x: '2020', y: 18, text: '25%' },
+  { x: '2020', y: 18, text: '25%' },
 ];
