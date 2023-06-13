@@ -4,8 +4,10 @@ import {
   AiOutlineAreaChart,
 }
   from 'react-icons/ai';
-import { FiEdit, FiPieChart, FiBarChart2 } from 'react-icons/fi';
-import { BsKanban, BsCalendarDay } from 'react-icons/bs';
+import {
+  FiEdit, FiPieChart, FiBarChart2, FiBarChart,
+} from 'react-icons/fi';
+import { BsKanban, BsCalendarDay, BsBoxSeam } from 'react-icons/bs';
 import { CgColorBucket } from 'react-icons/cg';
 import { GiBallPyramid } from 'react-icons/gi';
 import {
@@ -14,6 +16,7 @@ import {
 import { FaPeopleCarry } from 'react-icons/fa';
 import { BiLineChart } from 'react-icons/bi';
 import { GrMoney } from 'react-icons/gr';
+import { HiOutlineRefresh } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
 
 export const barPrimaryXAxis = {
@@ -117,6 +120,33 @@ export const profitData = [
     title: 'Customers',
     inconColor: '#03C9D7',
     iconBg: '#E5FAFB',
+    pcColor: 'red-600',
+  },
+  {
+    icon: <BsBoxSeam />,
+    amount: '2,345',
+    percentage: '+19%',
+    title: 'Product',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+    pcColor: 'green-600',
+  },
+  {
+    icon: <FiBarChart />,
+    amount: '3,345',
+    percentage: '+38%',
+    title: 'Sales',
+    iconColor: 'rgb(228, 106, 118)',
+    iconBg: 'rgb(255, 244, 229)',
+    pcColor: 'green-600',
+  },
+  {
+    icon: <HiOutlineRefresh />,
+    amount: '40,345',
+    percentage: '-8%',
+    title: 'Refunds',
+    iconColor: 'rgb(0, 194, 146)',
+    iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
   },
 ];
