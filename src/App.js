@@ -36,7 +36,7 @@ const App = () => {
               hover:drop-shadow-xl
               hover:bg-light-gray text-white"
                 style={{
-                  background: '#f56565',
+                  background: 'blue',
                   borderRadius: '50%',
                 }}
               >

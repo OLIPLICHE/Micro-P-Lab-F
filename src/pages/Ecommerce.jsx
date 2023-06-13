@@ -2,6 +2,7 @@ import React from 'react';
 // import { BsCurrencyDollar } from 'react-icons/bs';
 // import { GoPrimitiveDot } from 'react-icons/go';
 // import { profitData, pieChart, SparklineArea } from '../data/core';
+import { Button } from '../components';
 // import {
 //   Stacked, Pie, Button, LineChart, SparkLine,
 // } from '../components';
@@ -16,8 +17,17 @@ const Ecommerce = () => (
       >
         <div className="flex justify-between items-center">
           <div>
-            <p>Income</p>
+            <p className="font-bold text-gray-400">Earnings</p>
+            <p className="text-2xl">$46,892.00</p>
           </div>
+        </div>
+        <div className="mt-5">
+          <Button
+            color="white"
+            bgColor="blue"
+            text="Download"
+            borderRadius="4px"
+          />
         </div>
       </div>
     </div>
