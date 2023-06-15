@@ -38,8 +38,8 @@ const Ecommerce = () => (
         {profitData.map((item) => (
           <div
             key={item.title}
-            className="big-white dark:text-gray-200
-            dark:bg-secondary-dark-bg md:w-56 p-4
+            className="bg-red dark:text-gray-200
+            dark:bg-secondary-dark-bg md:w-36 p-4 h-44
             pt-9 rounded-2xl"
           >
             <button
@@ -56,6 +56,12 @@ const Ecommerce = () => (
               >
                 {item.amount}
               </span>
+              <span className={`text-sm text-${item.pcColor} ml-1`}>
+                {item.percentage}
+              </span>
+            </p>
+            <p className="text-sm text-gray-500 mt-1">
+              {item.title}
             </p>
           </div>
         ))}
