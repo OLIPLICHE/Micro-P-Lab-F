@@ -1,6 +1,6 @@
 import React from 'react';
 // import { BsCurrencyDollar } from 'react-icons/bs';
-// import { GoPrimitiveDot } from 'react-icons/go';
+import { GoPrimitiveDot } from 'react-icons/go';
 import { profitData } from '../data/core';
 // import { profitData, pieChart, SparklineArea } from '../data/core';
 import { Button } from '../components';
@@ -33,7 +33,7 @@ const Ecommerce = () => (
         </div>
       </div>
       <div className="flex m-3 flex-wrap justify-center
-      gap-1 items-center"
+      gap-1 items-center bg-white"
       >
         {profitData.map((item) => (
           <div
@@ -75,6 +75,20 @@ const Ecommerce = () => (
           <p className="font-semibold text-xl">
             Revenue Updates
           </p>
+          <div className="flex items-center gap-4">
+            <p className="flex items-center gap-2 text-gray-600
+            hover:drop-shadow-xl"
+            >
+              <span><GoPrimitiveDot /></span>
+              <span>Expenses</span>
+            </p>
+            <p className="flex items-center gap-2 text-green-600
+            hover:drop-shadow-xl"
+            >
+              <span><GoPrimitiveDot /></span>
+              <span>Budget</span>
+            </p>
+          </div>
         </div>
       </dev>
     </div>
