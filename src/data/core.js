@@ -5,18 +5,19 @@ import {
 }
   from 'react-icons/ai';
 import {
-  FiEdit, FiPieChart, FiBarChart2, FiBarChart,
+  FiEdit, FiPieChart, FiBarChart2,
 } from 'react-icons/fi';
-import { BsKanban, BsCalendarDay, BsBoxSeam } from 'react-icons/bs';
+import { BsKanban, BsCalendarDay } from 'react-icons/bs';
+import { FcSalesPerformance } from 'react-icons/fc';
 import { CgColorBucket } from 'react-icons/cg';
 import { GiBallPyramid } from 'react-icons/gi';
 import {
-  MdOutlineBusinessCenter, MdMap, MdStackedLineChart, MdOutlineSupervisorAccount,
+  MdOutlineBusinessCenter, MdMap, MdStackedLineChart,
 } from 'react-icons/md';
 import { FaPeopleCarry } from 'react-icons/fa';
-import { BiLineChart } from 'react-icons/bi';
+import { BiLineChart, BiPackage } from 'react-icons/bi';
 import { GrMoney } from 'react-icons/gr';
-import { HiOutlineRefresh } from 'react-icons/hi';
+import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
 
 export const barPrimaryXAxis = {
@@ -114,7 +115,7 @@ export const links = [
 
 export const profitData = [
   {
-    icon: <MdOutlineSupervisorAccount />,
+    icon: <HiOutlineUserGroup />,
     amount: '68,245',
     percentage: '-4%',
     title: 'Customers',
@@ -123,7 +124,7 @@ export const profitData = [
     pcColor: 'red-600',
   },
   {
-    icon: <BsBoxSeam />,
+    icon: <BiPackage />,
     amount: '2,345',
     percentage: '+19%',
     title: 'Product',
@@ -132,7 +133,7 @@ export const profitData = [
     pcColor: 'green-600',
   },
   {
-    icon: <FiBarChart />,
+    icon: <FcSalesPerformance />,
     amount: '3,345',
     percentage: '+38%',
     title: 'Sales',
