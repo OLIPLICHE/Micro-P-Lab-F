@@ -33,7 +33,7 @@ const Ecommerce = () => (
         </div>
       </div>
       <div className="flex m-3 flex-wrap justify-center
-      gap-1 items-center bg-white"
+      gap-1 items-center bg-red-300 rounded-2xl"
       >
         {profitData.map((item) => (
           <div
@@ -68,7 +68,7 @@ const Ecommerce = () => (
       </div>
     </div>
     <div className="flex gap-10 flex-wrap justify-center">
-      <div className="bg-white dark:text-gray-200
+      <div className="bg-green-200 dark:text-gray-200
       dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780"
       >
         <div className="flex justify-between">
@@ -94,13 +94,23 @@ const Ecommerce = () => (
           <div className="border-r-1 border-color m-4 pr-10">
             <p>
               <span className="text-3xl font-semibold">
-                $20,000.00
+                $20,000
               </span>
               <span className="p-1.5 hover:drop-shadow-xl
-                cursor-pointer rounded-full text-white bg-green-400 ml-3"
+                cursor-pointer rounded-full text-white bg-green-400
+                text-xs ml-3"
               >
                 15%
               </span>
+            </p>
+            <p className="text-gray-500 mt-1">Budget</p>
+          </div>
+          <div className="mt-8">
+            <p className="text-3xl font-semibold">
+              $51,020
+            </p>
+            <p className="text-gray-500 mt-1">
+              Expense
             </p>
           </div>
         </div>
