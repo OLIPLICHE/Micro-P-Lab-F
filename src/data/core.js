@@ -152,7 +152,28 @@ export const profitData = [
   },
 ];
 
-export const SparklineArea = [
+export const stackedChartData = [
+  [
+    { x: 'Jan', y: 115.2 },
+    { x: 'Feb', y: 134.1 },
+    { x: 'Jan', y: 139.6 },
+    { x: 'Jan', y: 151.1 },
+    { x: 'Jan', y: 161.3 },
+    { x: 'Jan', y: 165.1 },
+    { x: 'Jan', y: 169.9 },
+  ],
+  [
+    { x: 'Jan', y: 115.2 },
+    { x: 'Feb', y: 134.1 },
+    { x: 'Jan', y: 139.6 },
+    { x: 'Jan', y: 151.1 },
+    { x: 'Jan', y: 161.3 },
+    { x: 'Jan', y: 165.1 },
+    { x: 'Jan', y: 169.9 },
+  ],
+];
+
+export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
   { x: 3, yval: 8 },
@@ -166,3 +187,50 @@ export const pieChart = [
   { x: '2020', y: 18, text: '25%' },
   { x: '2020', y: 18, text: '25%' },
 ];
+
+export const stackedCustomSeries = [
+
+  {
+    dataSource: stackedChartData[0],
+    xName: 'x',
+    yName: 'y',
+    name: 'Budget',
+    type: 'StackingColumn',
+    background: 'blue',
+
+  },
+
+  {
+    dataSource: stackedChartData[1],
+    xName: 'x',
+    yName: 'y',
+    name: 'Expense',
+    type: 'StackingColumn',
+    background: 'red',
+
+  },
+
+];
+
+export const stackedPrimaryXAxis = {
+  majorGridLines: { width: 0 },
+  minorGridLines: { width: 0 },
+  majorTckLines: { width: 0 },
+  minorTckLines: { width: 0 },
+  interval: 1,
+  lineStyle: { width: 0 },
+  labelIntersectAction: 'Rotate45',
+  valueType: 'Category',
+};
+
+export const stackedPrimaryYAxis = {
+  lineStyle: { width: 0 },
+  minimum: 100,
+  maximum: 400,
+  interval: 100,
+  majorTickLines: { width: 0 },
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  minorTickLines: { width: 0 },
+  labelFormat: '{value}',
+};
