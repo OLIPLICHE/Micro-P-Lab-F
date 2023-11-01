@@ -20,6 +20,26 @@ import { GrMoney } from 'react-icons/gr';
 import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
 
+export const gridOrderImage = (props) => (
+  <div>
+    <img
+      className="rounded-xl h-20 md:ml-3"
+      src={props.ProductImage}
+      alt="order-item"
+    />
+  </div>
+);
+
+export const gridOrderStatus = (props) => (
+  <button
+    className="rounded-xl h-20 md:ml-3"
+    style={{ background: props.StatusBg }}
+    type="button"
+  >
+    {props.status}
+  </button>
+);
+
 export const barPrimaryXAxis = {
   valueType: 'Category',
   interval: 1,
@@ -234,3 +254,57 @@ export const stackedPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: '{value}',
 };
+
+export const ordersGridData = [
+  {
+    headerText: 'Image',
+    template: gridOrderImage,
+    textAlign: 'Center',
+    width: '120',
+
+  },
+  {
+    field: 'OrderItems',
+    headerText: 'Item',
+    width: '150',
+    editType: 'dropdownedit',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'CustomerName',
+    headerText: 'Customer Name',
+    width: '150',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'TotalAmount',
+    headerText: 'Total Amount',
+    format: 'C2',
+    width: '150',
+    editType: 'numericedit',
+    textAlign: 'Center',
+  },
+  {
+    headerText: 'Status',
+    template: gridOrderStatus,
+    field: 'OrderItems',
+    width: '120',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'OrderID',
+    headerText: 'Order ID',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
+  },
+
+];
