@@ -19,6 +19,12 @@ import { BiLineChart, BiPackage } from 'react-icons/bi';
 import { GrMoney } from 'react-icons/gr';
 import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
+import products1 from './products1.png';
+import Mango from './Mango.jpg';
+import product7 from './product7.jpg';
+import Loarding from './Loarding.jpg';
+import Banana from './Banana.jpg';
+import product1 from './product1.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -32,11 +38,11 @@ export const gridOrderImage = (props) => (
 
 export const gridOrderStatus = (props) => (
   <button
-    className="rounded-xl h-20 md:ml-3"
+    className="rounded-2xl py-1 px-2 text-white capitalize text-md md:ml-3"
     style={{ background: props.StatusBg }}
     type="button"
   >
-    {props.status}
+    {props.Status}
   </button>
 );
 
@@ -305,6 +311,99 @@ export const ordersGridData = [
     headerText: 'Location',
     width: '150',
     textAlign: 'Center',
+  },
+
+];
+
+export const ordersData = [
+  {
+    OrderID: 10248,
+    CustomerName: 'Brell',
+
+    TotalAmount: 22.18,
+    OrderItems: 'Pineapple',
+    Location: 'CONGO',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage: products1,
+
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Noel-Yk',
+    TotalAmount: 56.43,
+    OrderItems: 'Mango',
+    Location: 'Ivory Coast',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage: Mango,
+
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Rose',
+    TotalAmount: 120,
+    OrderItems: 'Candy Gucci',
+    Location: 'Kentuky',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage: product7,
+
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Augustin',
+    TotalAmount: 2,
+    OrderItems: 'Poultry',
+    Location: 'Togo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage: 'https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-01/AgFS_AnimalScience_Poultry_5.jpg?itok=V-oEoeij',
+
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Loarding',
+    TotalAmount: 100,
+    OrderItems: 'Loarding',
+    Location: 'Loarding',
+    Status: 'loarding...',
+    StatusBg: '#03C9D7',
+    ProductImage: Loarding,
+
+  },
+  {
+    OrderID: 89389,
+    CustomerName: 'Anita',
+    TotalAmount: 14,
+    OrderItems: 'Banana',
+    Location: 'Brazil',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage: Banana,
+
+  },
+  {
+    OrderID: 79379,
+    CustomerName: 'Victor',
+    TotalAmount: 345,
+    OrderItems: 'Healthcare Erbology',
+    Location: 'Mexico',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage: product1,
+
+  },
+  {
+    OrderID: 89379,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
   },
 
 ];
