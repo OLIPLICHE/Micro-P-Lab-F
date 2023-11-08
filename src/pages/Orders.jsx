@@ -22,7 +22,7 @@ const Orders = () => (
         {ordersGridData.map((item, index) => (<ColumnDirective key={index.id} {...item} />
         ))}
       </ColumnsDirective>
-      <Inject service={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
+      <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
     </GridComponent>
   </div>
 );
