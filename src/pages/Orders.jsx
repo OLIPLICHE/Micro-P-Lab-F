@@ -1,8 +1,8 @@
 import React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
-
-// import { , Resize, Sort, ContextMenu,
-// Filter, Page, ExcelEport, PdfExport, Edit, Inject } from '@syncfusion/ej2-react-grids';
+import {
+  GridComponent, ColumnsDirective, ColumnDirective, Inject,
+  Filter, Resize, Sort, Page, ExcelExport, PdfExport, Edit, ContextMenu,
+} from '@syncfusion/ej2-react-grids';
 
 // Export { ordersData, contextMenuItems, ordersGrid } '../data/core';
 import { ordersData, ordersGridData } from '../data/core';
@@ -22,6 +22,7 @@ const Orders = () => (
         {ordersGridData.map((item, index) => (<ColumnDirective key={index.id} {...item} />
         ))}
       </ColumnsDirective>
+      <Inject service={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
     </GridComponent>
   </div>
 );
