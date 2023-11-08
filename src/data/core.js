@@ -19,6 +19,33 @@ import { BiLineChart, BiPackage } from 'react-icons/bi';
 import { GrMoney } from 'react-icons/gr';
 import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
+import tomato from './tomato.jpg';
+import products1 from './products1.png';
+import Mango from './Mango.jpg';
+import product7 from './product7.jpg';
+import Loarding from './Loarding.jpg';
+import Banana from './Banana.jpg';
+import product1 from './product1.jpg';
+
+export const gridOrderImage = (props) => (
+  <div>
+    <img
+      className="rounded-xl h-20 md:ml-3"
+      src={props.ProductImage}
+      alt="order-item"
+    />
+  </div>
+);
+
+export const gridOrderStatus = (props) => (
+  <button
+    className="rounded-2xl py-1 px-2 text-white capitalize text-md md:ml-3"
+    style={{ background: props.StatusBg }}
+    type="button"
+  >
+    {props.Status}
+  </button>
+);
 
 export const barPrimaryXAxis = {
   valueType: 'Category',
@@ -234,3 +261,975 @@ export const stackedPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: '{value}',
 };
+
+export const ordersGridData = [
+  {
+    headerText: 'Image',
+    template: gridOrderImage,
+    textAlign: 'Center',
+    width: '120',
+
+  },
+  {
+    field: 'OrderItems',
+    headerText: 'Item',
+    width: '150',
+    editType: 'dropdownedit',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'CustomerName',
+    headerText: 'Customer Name',
+    width: '150',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'TotalAmount',
+    headerText: 'Total Amount',
+    format: 'C2',
+    width: '150',
+    editType: 'numericedit',
+    textAlign: 'Center',
+  },
+  {
+    headerText: 'Status',
+    template: gridOrderStatus,
+    field: 'OrderItems',
+    width: '120',
+    textAlign: 'Center',
+
+  },
+  {
+    field: 'OrderID',
+    headerText: 'Order ID',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
+  },
+
+];
+
+export const ordersData = [
+  {
+    OrderID: 10238,
+    CustomerName: 'Brell',
+
+    TotalAmount: 22.18,
+    OrderItems: 'Pineapple',
+    Location: 'CONGO',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage: products1,
+
+  },
+  {
+    OrderID: 345353,
+    CustomerName: 'Noel-Yk',
+    TotalAmount: 56.43,
+    OrderItems: 'Mango',
+    Location: 'Ivory Coast',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage: Mango,
+
+  },
+  {
+    OrderID: 390757,
+    CustomerName: 'Rose',
+    TotalAmount: 120,
+    OrderItems: 'Candy Gucci',
+    Location: 'Kentuky',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage: product7,
+
+  },
+  {
+    OrderID: 88489,
+    CustomerName: 'Augustin',
+    TotalAmount: 2,
+    OrderItems: 'Poultry',
+    Location: 'Togo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage: 'https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-01/AgFS_AnimalScience_Poultry_5.jpg?itok=V-oEoeij',
+
+  },
+  {
+    OrderID: 350457,
+    CustomerName: 'Loarding',
+    TotalAmount: 100,
+    OrderItems: 'Loarding',
+    Location: 'Loarding',
+    Status: 'loarding...',
+    StatusBg: '#03C9D7',
+    ProductImage: Loarding,
+
+  },
+  {
+    OrderID: 89381,
+    CustomerName: 'Anita',
+    TotalAmount: 14,
+    OrderItems: 'Banana',
+    Location: 'Brazil',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage: Banana,
+
+  },
+  {
+    OrderID: 79579,
+    CustomerName: 'Victor',
+    TotalAmount: 345,
+    OrderItems: 'Healthcare Erbology',
+    Location: 'Mexico',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage: product1,
+
+  },
+  {
+    OrderID: 39375,
+    CustomerName: 'canada',
+    TotalAmount: 3450,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 69374,
+    CustomerName: 'Amour',
+    TotalAmount: 124,
+    OrderItems: 'Headphone',
+    Location: 'China',
+    Status: 'Pending',
+    StatusBg: '#FB9678',
+    ProductImage: 'https://m.media-amazon.com/images/I/51JdBWMXfWL._AC_UF1000,1000_QL80_.jpg',
+
+  },
+  {
+    OrderID: 49345,
+    CustomerName: 'Sam',
+    TotalAmount: 34,
+    OrderItems: 'Night Lamp',
+    Location: 'Ghana',
+    Status: 'Canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage: 'https://m.media-amazon.com/images/I/51ZIHj6kEaL.jpg',
+
+  },
+  {
+    OrderID: 79875,
+    CustomerName: 'Henry',
+    TotalAmount: 50,
+    OrderItems: 'Fresh Tomato',
+    Location: 'Kentucky, USA',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: tomato,
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'Daniel',
+    TotalAmount: 123,
+    OrderItems: 'Bible KJV',
+    Location: 'Ghana',
+    Status: 'Active',
+    StatusBg: '#03C9D7',
+    ProductImage: 'https://m.media-amazon.com/images/I/91-D37-2VVL._AC_UF1000,1000_QL80_.jpg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'PAKA',
+    TotalAmount: 34500,
+    OrderItems: 'Toyota',
+    Location: 'Mexico',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://news-site-za.s3.af-south-1.amazonaws.com/images/2023/07/hilux-rs.jpg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+  {
+    OrderID: 89375,
+    CustomerName: 'canada',
+    TotalAmount: 34500,
+    OrderItems: 'Flight ticket',
+    Location: 'Canada',
+    Status: 'Completed',
+    StatusBg: '#8BE78B',
+    ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
+
+  },
+
+];
