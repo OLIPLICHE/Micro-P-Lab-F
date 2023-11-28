@@ -8,7 +8,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import {
   Cart, Chat, Notification, UserProfile,
 } from '.';
-import owner from '../data/owner.jpg';
+import owner from '../data/images/owner.jpg';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({

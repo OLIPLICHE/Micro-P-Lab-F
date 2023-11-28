@@ -16,16 +16,17 @@ import {
 } from 'react-icons/md';
 import { FaPeopleCarry } from 'react-icons/fa';
 import { BiLineChart, BiPackage } from 'react-icons/bi';
-import { GrMoney } from 'react-icons/gr';
+import { GrMoney, GrLocation } from 'react-icons/gr';
 import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
 // import { RiStockLine } from 'react-icons/ri';
-import tomato from './tomato.jpg';
-import products1 from './products1.png';
-import Mango from './Mango.jpg';
-import product7 from './product7.jpg';
-import Loarding from './Loarding.jpg';
-import Banana from './Banana.jpg';
-import product1 from './product1.jpg';
+import Banana from './images/Banana.jpg';
+import tomato from './images/tomato.jpg';
+import products1 from './images/products1.png';
+import Mango from './images/Mango.jpg';
+import product7 from './images/product7.jpg';
+import Loarding from './images/Loarding.jpg';
+import product1 from './images/product1.jpg';
+import avatar3 from './images/avatar3.png';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -34,6 +35,24 @@ export const gridOrderImage = (props) => (
       src={props.ProductImage}
       alt="order-item"
     />
+  </div>
+);
+
+const gridEmployeeProfile = (props) => (
+  <div className="flex items-center gap-2">
+    <img
+      className="rounded-full w-10 h-10"
+      src={props.EmployeeImage}
+      alt="employee"
+    />
+    <p>{props.Name}</p>
+  </div>
+);
+
+const gridEmployeeCountry = (props) => (
+  <div className="flex items-center justify-center gap-2">
+    <GrLocation />
+    <span>{props.Country}</span>
   </div>
 );
 
@@ -1230,6 +1249,66 @@ export const ordersData = [
     StatusBg: '#8BE78B',
     ProductImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg',
 
+  },
+
+];
+
+export const employeesGrid = [
+  {
+    headerText: 'Employee',
+    width: '150',
+    template: gridEmployeeProfile,
+    textAlign: 'Center',
+  },
+  {
+    field: 'Name',
+    headerText: '',
+    width: '0',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Title',
+    headerText: 'Designation',
+    width: '170',
+    textAlign: 'Center',
+  },
+  {
+    headerText: 'Country',
+    width: '120',
+    textAlign: 'Center',
+    template: gridEmployeeCountry,
+  },
+  {
+    field: 'HireDate',
+    headerText: 'Hire Date',
+    width: '135',
+    format: 'yyyy-MM-dd',
+    textAlign: 'Center',
+  },
+  {
+    field: 'ReportsTo',
+    headerText: 'Reports To',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'EmployeeID',
+    headerText: 'Employee ID',
+    width: '125',
+    textAlign: 'Center',
+  },
+
+];
+
+export const employeesData = [
+  {
+    EmployeeID: 1,
+    Name: 'Augustin',
+    Title: 'Sales Manager',
+    HireData: '2021/02/21',
+    Country: 'GHANA',
+    ReportsTo: 'Yannic',
+    EmployeeImage: avatar3,
   },
 
 ];
