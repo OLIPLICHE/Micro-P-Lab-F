@@ -16,16 +16,40 @@ import {
 } from 'react-icons/md';
 import { FaPeopleCarry } from 'react-icons/fa';
 import { BiLineChart, BiPackage } from 'react-icons/bi';
-import { GrMoney } from 'react-icons/gr';
+import { GrMoney, GrLocation } from 'react-icons/gr';
 import { HiOutlineRefresh, HiOutlineUserGroup } from 'react-icons/hi';
+// import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 // import { RiStockLine } from 'react-icons/ri';
-import tomato from './tomato.jpg';
-import products1 from './products1.png';
-import Mango from './Mango.jpg';
-import product7 from './product7.jpg';
-import Loarding from './Loarding.jpg';
-import Banana from './Banana.jpg';
-import product1 from './product1.jpg';
+import Banana from './images/Banana.jpg';
+import tomato from './images/tomato.jpg';
+import products1 from './images/products1.png';
+import Mango from './images/Mango.jpg';
+import product7 from './images/product7.jpg';
+import Loarding from './images/Loarding.jpg';
+import product1 from './images/product1.jpg';
+import avatar3 from './images/good.jpg';
+import owner from './images/owner.jpg';
+
+const customerGridImage = (props) => (
+  <div className="image flex gap-2">
+    <img
+      className="rounded-full w-10 h-10"
+      src={props.CustomerImage}
+      alt="customer"
+    />
+    <div>
+      <p>{props.CustomerName}</p>
+      <p>{props.CustomerEmail}</p>
+    </div>
+  </div>
+);
+
+const customerGridStatus = (props) => (
+  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+    <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
+    <p>{props.Status}</p>
+  </div>
+);
 
 export const gridOrderImage = (props) => (
   <div>
@@ -36,6 +60,34 @@ export const gridOrderImage = (props) => (
     />
   </div>
 );
+
+const gridEmployeeProfile = (props) => (
+  <div className="flex items-center gap-2">
+    <img
+      className="rounded-full w-10 h-10"
+      src={props.EmployeeImage}
+      alt="employee"
+    />
+    <p>{props.Name}</p>
+  </div>
+);
+
+const gridEmployeeCountry = (props) => (
+  <div className="flex items-center justify-center gap-2">
+    <GrLocation />
+    <span>{props.Country}</span>
+  </div>
+);
+
+// const dateValue = () => (
+//   <div>
+//     <DatePickerComponent
+//       value={dateValue}
+//       format="yyyy-MM-dd"
+//       placeholder="Enter date"
+//     />
+//   </div>
+// );
 
 export const gridOrderStatus = (props) => (
   <button
@@ -1232,4 +1284,553 @@ export const ordersData = [
 
   },
 
+];
+
+export const employeesGrid = [
+  {
+    headerText: 'Employee',
+    width: '150',
+    template: gridEmployeeProfile,
+    textAlign: 'Center',
+  },
+  {
+    field: 'Name',
+    headerText: '',
+    width: '0',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Title',
+    headerText: 'Title',
+    width: '170',
+    textAlign: 'Center',
+  },
+  {
+    headerText: 'Country',
+    width: '120',
+    textAlign: 'Center',
+    template: gridEmployeeCountry,
+  },
+  // {
+  //   field: 'HireDate',
+  //   headerText: 'Hire Date',
+  //   width: '135',
+  //   format: 'yMd',
+  //   textAlign: 'Right',
+  // },
+  {
+    field: 'ReportsTo',
+    headerText: 'Reports To',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'EmployeeID',
+    headerText: 'Employee ID',
+    width: '125',
+    textAlign: 'Center',
+  },
+
+];
+
+export const employeesData = [
+  {
+    EmployeeID: 1,
+    Name: 'Augustin',
+    Title: 'Sales Manager',
+    HireData: new Date(8364186e5),
+    Country: 'GHANA',
+    ReportsTo: '3',
+    EmployeeImage: owner,
+  },
+  {
+    EmployeeID: 2,
+    Name: 'Fuller',
+    Title: 'Senior Engineer',
+    HireData: new Date(713764800000),
+    Country: 'CONGO-BZ',
+    ReportsTo: '1',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 20,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 19,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 18,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 17,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 16,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 15,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 14,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 13,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 12,
+    Name: 'Sharon',
+    Title: 'Medical Doctor',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 3,
+    Name: 'Luxin',
+    Title: 'Head Master',
+    HireData: '2021/02/21',
+    Country: 'USA',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 4,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 5,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 5,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 7,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 8,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 9,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 10,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+  {
+    EmployeeID: 11,
+    Name: 'Naval',
+    Title: 'Senior Engineer',
+    HireData: '2021/02/21',
+    Country: 'CONGO-BZ',
+    ReportsTo: 'Paka',
+    EmployeeImage: avatar3,
+  },
+
+];
+
+export const CustomersGrid = [
+  { type: 'checkbox', width: '50' },
+  {
+    headerText: 'Name',
+    width: '150',
+    template: customerGridImage,
+    textAlign: 'Center',
+  },
+  {
+    field: 'ProjectName',
+    headerText: 'Project Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Status',
+    headerText: 'Status',
+    width: '130',
+    format: 'yMd',
+    textAlign: 'Center',
+    template: customerGridStatus,
+  },
+  {
+    field: 'Weeks',
+    headerText: 'Weeks',
+    width: '100',
+    format: 'C2',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Budget',
+    headerText: 'Budget',
+    width: '100',
+    format: 'yMd',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'CustomerID',
+    headerText: 'Customer ID',
+    width: '120',
+    textAlign: 'Center',
+    isPrimaryKey: true,
+  },
+];
+
+export const CustomersData = [
+  {
+    CustomerID: 1001,
+    CustomerName: 'Frederic',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'France',
+  },
+  {
+    CustomerID: 1002,
+    CustomerName: 'Nancy',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Pending',
+    StatusBg: '#FB9678',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'India',
+  },
+  {
+    CustomerID: 1003,
+    CustomerName: 'Elison',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Coasta',
+  },
+  {
+    CustomerID: 1004,
+    CustomerName: 'Eliza',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Ukraine',
+  },
+  {
+    CustomerID: 1005,
+    CustomerName: 'Tabita',
+    CustomerEmail: 'mio@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'CONGO',
+  },
+  {
+    CustomerID: 1006,
+    CustomerName: 'Oli',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Canada',
+  },
+  {
+    CustomerID: 1007,
+    CustomerName: 'Akwesi',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Ghana',
+  },
+  {
+    CustomerID: 1008,
+    CustomerName: 'Wintechson',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'India',
+  },
+  {
+    CustomerID: 1009,
+    CustomerName: 'Chacoson',
+    CustomerEmail: 'mio@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Senegal',
+  },
+  {
+    CustomerID: 1010,
+    CustomerName: 'Tatison',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'uk',
+  },
+  {
+    CustomerID: 1011,
+    CustomerName: 'Stock',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Canada',
+  },
+  {
+    CustomerID: 1012,
+    CustomerName: 'Frederic',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'France',
+  },
+  {
+    CustomerID: 1013,
+    CustomerName: 'Nell',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Pending',
+    StatusBg: '#FB9678',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'India',
+  },
+  {
+    CustomerID: 1014,
+    CustomerName: 'Soso',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Coasta',
+  },
+  {
+    CustomerID: 1015,
+    CustomerName: 'Nelli',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Ukraine',
+  },
+  {
+    CustomerID: 1016,
+    CustomerName: 'Noel',
+    CustomerEmail: 'mio@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'CONGO',
+  },
+  {
+    CustomerID: 1017,
+    CustomerName: 'Brell',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Canada',
+  },
+  {
+    CustomerID: 1018,
+    CustomerName: 'Tati',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Congo',
+  },
+  {
+    CustomerID: 1019,
+    CustomerName: 'Techson',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Cancelled',
+    StatusBg: '#FF5C8E',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'India',
+  },
+  {
+    CustomerID: 1020,
+    CustomerName: 'Koson',
+    CustomerEmail: 'mio@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Venezuela',
+  },
+  {
+    CustomerID: 1021,
+    CustomerName: 'Tison',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'Germany',
+  },
+  {
+    CustomerID: 1022,
+    CustomerName: 'Stock',
+    CustomerEmail: 'my@gmail.com',
+    CustomerImage: avatar3,
+    ProjectName: 'Building a virtual P',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: '$2.4k',
+    Location: 'USA',
+  },
 ];
