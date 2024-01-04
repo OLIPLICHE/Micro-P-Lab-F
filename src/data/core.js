@@ -2149,3 +2149,22 @@ export const kanbanData = [
     ClassName: 'e-story, e-low, e-nancy-davloio',
   },
 ];
+
+export const toolbarSettings = {
+  items: [
+    'Bold', 'Italic', 'Underline', 'StrikeThrough',
+    'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+    'LowerCase', 'UpperCase', 'Formats',
+    'Alignments', 'OrderedList', 'UnorderedList', 'Outdent',
+    'Indent', 'CreateLink', 'Image', 'ClearFormat', 'Print',
+    'SourceCode', 'FullScreen', 'Undo', 'Redo',
+  ],
+};
+
+export const EditorSetting = {
+  image: [
+    'Replace', 'Align', 'Caption', 'Remove', 'InsertLink',
+    'OpenImageLink', '-', 'EditImageLink', 'RemoveImageLink',
+    'Display', 'AltText', 'Dimension',
+  ],
+};
