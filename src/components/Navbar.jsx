@@ -5,9 +5,10 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification4Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import {
-  Cart, Chat, Notification, UserProfile,
-} from '.';
+import Chat from './Chat';
+import Notification from './Notification';
+import UserProfile from './UserProfile';
+import Cart from './Cart';
 import owner from '../data/images/owner.jpg';
 import { useStateContext } from '../contexts/ContextProvider';
 
