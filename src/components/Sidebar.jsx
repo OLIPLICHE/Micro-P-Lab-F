@@ -44,6 +44,7 @@ const Sidebar = () => {
               position="BottomCenter"
             >
               <button
+                aria-label="side click Button"
                 type="button"
                 onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
                 className="text-xl p-3 mt-4 md:hidden

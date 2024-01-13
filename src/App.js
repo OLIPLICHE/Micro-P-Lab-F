@@ -31,6 +31,7 @@ const App = () => {
               position="BottomRight"
             >
               <button
+                aria-label="Settings Button"
                 type="button"
                 className="text-3xl p-3
               hover:drop-shadow-xl
