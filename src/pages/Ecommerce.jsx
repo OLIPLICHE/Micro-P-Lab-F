@@ -1,5 +1,4 @@
 import React from 'react';
-// import { GoPrimitiveDot } from 'react-icons/go';
 import { profitData, SparklineAreaData } from '../data/core';
 import { Button, SparkLine, Stacked } from '../components';
 
