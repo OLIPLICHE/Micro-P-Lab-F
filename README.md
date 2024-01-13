@@ -1,5 +1,8 @@
 # Micro-p-lab
-The Micro-P-Lab is Under construction, Amazing job so far.
+The Micro-P-Lab is Under construction, It has done an amazing job so far. I have been adding more features gradually
+
+# Deployed Link
+[Click here to see the live version](https://micro-app.netlify.app/)
 
 # Font page
 ![App-Image](./src/data/images/front1.JPG)
